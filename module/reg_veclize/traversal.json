@@ -1,0 +1,45 @@
+{
+  "filters":{
+    "filter":[
+      {
+        "id":"1",
+        "rule":"(%3Fi)(%3F%3A%5Cx5c%7C(%3F%3A%25(%3F%3Ac(%3F%3A0%25(%3F%3A%5B2aq%5Df%7C5c%7C9v)%7C1%25(%3F%3A%5B19p%5Dc%7C8s%7Caf))%7C2(%3F%3A5(%3F%3Ac(%3F%3A0%2525af%7C1%25259c)%7C2f%7C5c)%7C%2546%7Cf)%7C(%3F%3A(%3F%3Af(%3F%3A8%258)%3F0%258%7Ce)0%2580%25a%7Cbg%25q)f%7C%253(%3F%3A2(%3F%3A%25(%3F%3A%256%7C4)6%7CF)%7C5%25%2563)%7Cu(%3F%3A221%5B56%5D%7C002f%7CEFC8%7CF025)%7C1u%7C5c)%7C0x(%3F%3A2f%7C5c)%7C%5C%2F))(%3F%3A%25(%3F%3A(%3F%3Af(%3F%3A(%3F%3Ac%2580%7C8)%258)%3F0%258%7Ce)0%2580%25ae%7C2(%3F%3A(%3F%3A5(%3F%3Ac0%2525a%7C2))%3Fe%7C%2545)%7Cu(%3F%3A(%3F%3A002%7Cff0)e%7C2024)%7C%2532(%3F%3A%25(%3F%3A%256%7C4)5%7CE)%7Cc0(%3F%3A%25%5B256aef%5De%7C%5C.))%7C%5C.(%3F%3A%250%5B01%5D%7C%5C%3F)%3F%7C%5C%3F%5C.%3F%7C0x2e)%7B2%7D(%3F%3A%5Cx5c%7C(%3F%3A%25(%3F%3Ac(%3F%3A0%25(%3F%3A%5B2aq%5Df%7C5c%7C9v)%7C1%25(%3F%3A%5B19p%5Dc%7C8s%7Caf))%7C2(%3F%3A5(%3F%3Ac(%3F%3A0%2525af%7C1%25259c)%7C2f%7C5c)%7C%2546%7Cf)%7C(%3F%3A(%3F%3Af(%3F%3A8%258)%3F0%258%7Ce)0%2580%25a%7Cbg%25q)f%7C%253(%3F%3A2(%3F%3A%25(%3F%3A%256%7C4)6%7CF)%7C5%25%2563)%7Cu(%3F%3A221%5B56%5D%7C002f%7CEFC8%7CF025)%7C1u%7C5c)%7C0x(%3F%3A2f%7C5c)%7C%5C%2F))",
+        "description":"Detects basic directory traversal",
+        "tags":{
+          "tag":[
+            "dt"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"2",
+        "rule":"(%3F%3A%25c0%25ae%5C%2F)%7C(%3F%3A(%3F%3A%5C%2F%7C%5C%5C)(home%7Cconf%7Cusr%7Cetc%7Cproc%7Copt%7Cs%3Fbin%7Clocal%7Cdev%7Ctmp%7Ckern%7C%5Bbr%5Doot%7Csys%7Csystem%7Cwindows%7Cwinnt%7Cprogram%7C%25%5Ba-z_-%5D%7B3%2C%7D%25)(%3F%3A%5C%2F%7C%5C%5C))%7C(%3F%3A(%3F%3A%5C%2F%7C%5C%5C)inetpub%7Clocalstart%5C.asp%7Cboot%5C.ini)",
+        "description":"Detects specific directory and path traversal",
+        "tags":{
+          "tag":[
+            "dt"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"3",
+        "rule":"(%3F%3A%5E%7C%5B%5C%5C%2F%5D)%5C.%5C.(%3F%3A%5B%5C%5C%2F%5D%7C%24)",
+        "description":"basic lfi rule",
+        "tags":{
+          "tag":[
+            "dt"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      }
+    ]
+  }
+}

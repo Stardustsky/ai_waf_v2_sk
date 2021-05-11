@@ -1,0 +1,110 @@
+{
+  "filters":{
+    "filter":[
+      {
+        "id":"1",
+        "rule":"(%25%7c%23)%7b0%2c%7d.*(%5c%5b%7c%5c%7b%7c%5c().*(%40ognl.OgnlContext%7cjava.lang.Runtime%40getRuntime%7cjava.io.BufferedReader%7cjava.lang.ProcessBuilder)",
+        "description":"Struts2 Command Injection: Java function pattern found",
+        "tags":{
+          "tag":[
+            "java_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"2",
+        "rule":"java%5C.lang%5C.(%3F%3Aruntime%7Cprocessbuilder)",
+        "description":"Remote Command Execution: Suspicious Java class detected",
+        "tags":{
+          "tag":[
+            "java_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"3",
+        "rule":"(%3F%3Aruntime%7Cprocessbuilder)",
+        "description":"Remote Command Execution: Java process spawn (CVE-2017-9805)",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"4",
+        "rule":"(%3F%3Aclonetransformer%7Cforclosure%7Cinstantiatefactory%7Cinstantiatetransformer%7Cinvokertransformer%7Cprototypeclonefactory%7Cprototypeserializationfactory%7Cwhileclosure%7Cgetproperty%7Cfilewriter%7Cxmldecoder)",
+        "description":"Remote Command Execution: Java serialization (CVE-2015-5842)",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"5",
+        "rule":"%5Cxac%5Cxed%5Cx00%5Cx05",
+        "description":"Magic bytes Detected, probable java serialization in use",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"6",
+        "rule":"(%3F%3ArO0ABQ%7CKztAAU%7CCs7QAF)",
+        "description":"Magic bytes Detected Base64 Encoded, probable java serialization in use",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"7",
+        "rule":"(%3F%3Aclonetransformer%7Cforclosure%7Cinstantiatefactory%7Cinstantiatetransformer%7Cinvokertransformer%7Cprototypeclonefactory%7Cprototypeserializationfactory%7Cwhileclosure%7Cgetproperty%7Cfilewriter%7Cxmldecoder)",
+        "description":"Remote Command Execution: Java serialization (CVE-2015-5842)",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"8",
+        "rule":"(?:cnVudGltZQ|HJ1bnRpbWU|BydW50aW1l|cHJvY2Vzc2J1aWxkZXI|HByb2Nlc3NidWlsZGVy|Bwcm9jZXNzYnVpbGRlcg|Y2xvbmV0cmFuc2Zvcm1lcg|GNsb25ldHJhbnNmb3JtZXI|BjbG9uZXRyYW5zZm9ybWVy|Zm9yY2xvc3VyZQ|GZvcmNsb3N1cmU|Bmb3JjbG9zdXJl|aW5zdGFudGlhdGVmYWN0b3J5|Gluc3RhbnRpYXRlZmFjdG9yeQ|BpbnN0YW50aWF0ZWZhY3Rvcnk|aW5zdGFudGlhdGV0cmFuc2Zvcm1lcg|Gluc3RhbnRpYXRldHJhbnNmb3JtZXI|BpbnN0YW50aWF0ZXRyYW5zZm9ybWVy|aW52b2tlcnRyYW5zZm9ybWVy|Gludm9rZXJ0cmFuc2Zvcm1lcg|BpbnZva2VydHJhbnNmb3JtZXI|cHJvdG90eXBlY2xvbmVmYWN0b3J5|HByb3RvdHlwZWNsb25lZmFjdG9yeQ|Bwcm90b3R5cGVjbG9uZWZhY3Rvcnk|cHJvdG90eXBlc2VyaWFsaXphdGlvbmZhY3Rvcnk|HByb3RvdHlwZXNlcmlhbGl6YXRpb25mYWN0b3J5|Bwcm90b3R5cGVzZXJpYWxpemF0aW9uZmFjdG9yeQ|d2hpbGVjbG9zdXJl|HdoaWxlY2xvc3VyZQ|B3aGlsZWNsb3N1cmU)",
+        "description":"Base64 encoded string matched suspicious keyword",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      }
+    ]
+  }
+}

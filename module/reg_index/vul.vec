@@ -1,0 +1,64 @@
+
+#通用向量
+[common]
+vec=',",),>,(,<
+
+#sql注入常用向量
+[sqli_high]
+vec=floor(,substr(,concat(,all select,and sleep,group by,union all,order by,union select,insert into,-- ,having ,updatexml(,@@,information_schema,/*!
+
+[sqli_medium]
+vec=sleep(,or,and,if(,--,select,benchmark,concat(,/*,chr(,group_concat(,floor(
+
+[sqli_low]
+vec=like ,between,delay,limit,hex(,`
+
+#xss常用向量
+[xss_high]
+vec=<script src=,javascript:,data:text/html,string.fromcharcode(,response.write(,<iframe,<script,</script
+
+[xss_medium]
+vec=eval(,onerror=,alert(,onclick=,prompt(
+
+[xss_low]
+vec=</,href=",&#,document.,window.
+
+#命令注入
+[rce_high]
+vec=wget,&&,$IFS,cat ,bash ,curl ,sh ,system(,ls ,dir ,exec(,`,/add,net user,netstat -
+
+[rce_medium]
+vec=ping ,$,|,grep
+
+[rce_low]
+vec=print(,||,echo
+
+#路径穿越
+[traversal_high]
+vec=../,..\,\\,/*,.0x2f,.0x5c,..%2f,..%u2215
+
+[traversal_medium]
+vec=././,.\.\
+
+[traversal_low]
+vec=..
+
+#PHP命令注入
+[php_rce_high]
+vec=php://input,php://filter,<?php,phpinfo(,call_user_func(,array_map(,passthru(,file_put_contents(,preg_replace(,call_user_func(,
+
+[php_rce_medium]
+vec=${,zip://,bzip2://,eval(,?>,system(,include_once(,shell_exec(,assert(,require_once(
+
+[php_rce_low]
+vec=exec(,echo,$,popen(
+
+#JAVA命令注入
+[java_rce_high]
+vec=@ognl,ognl.,java.lang,xwork2.
+
+[java_rce_medium]
+vec=.getRuntime(),#parameters.,#request.tostring
+
+[java_rce_low]
+vec=java.,.httpservletresponse

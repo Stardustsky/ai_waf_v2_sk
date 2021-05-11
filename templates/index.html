@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui">
+    <title>mlwaf Test</title>
+
+</head>
+<body style="text-align:center">
+    <span style="color:red;font-size:32px"> MLWAF攻击检测：</span><br/><br/><br/>
+
+    <form action='/' enctype="multipart/form-data" method='post'>
+        {% raw xsrf_form_html() %}
+        <input id="payload" type="text" name="payload" placeholder="请输入攻击 Payload，不含域名" style="width:800px;text-align:center;", value="{{postsql}}">
+        <input type='submit' style="display:inline-block" value='测试'/>
+    </form>
+    <span style="color:red;font-size:14px">{{ outsql }}</span>
+</body>
+<script>
+    var input = document.getElementById('sqltext');
+    input.onfocus = function () {
+        input.select();
+    };
+</script>
+</html>

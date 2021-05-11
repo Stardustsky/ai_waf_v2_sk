@@ -1,0 +1,97 @@
+{
+  "filters":{
+    "filter":[
+      {
+        "id":"1",
+        "rule":"(%3f%3a%3c%5c%3fphp%7c%5c%5b(%3f%3a%2f%7c%5c%5c%5c%5c)%3fphp%5c%5d%7c%3cscript.*language%3d(%27%7c%22)%7b0%2c1%7dphp)",
+        "description":"PHP Injection Attack: PHP Open Tag Found",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"2",
+        "rule":"(%3Fi)php%3A%2F%2F(std(in%7Cout%7Cerr)%7C(in%7Cout)put%7Cfd%7Cmemory%7Ctemp%7Cfilter)",
+        "description":"PHP Injection Attack: I/O Stream Found",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"3",
+        "rule":"(%3Fi)%5Cb(%3F%3As(%3F%3Ae(%3F%3At(%3F%3A_(%3F%3Ae(%3F%3Axception%7Crror)_handler%7Cmagic_quotes_runtime%7Cinclude_path)%7Cdefaultstub)%7Cssion_s(%3F%3Aet_save_handler%7Ctart))%7Cqlite_(%3F%3A(%3F%3A(%3F%3Aunbuffered%7Csingle%7Carray)_)%3Fquery%7Ccreate_(%3F%3Aaggregate%7Cfunction)%7Cp%3Fopen%7Cexec)%7Ctr(%3F%3Aeam_(%3F%3Acontext_create%7Csocket_client)%7Cipc%3Fslashes%7Crev)%7Cimplexml_load_(%3F%3Astring%7Cfile)%7Cocket_c(%3F%3Aonnect%7Create)%7Ch(%3F%3Aow_sourc%7Ca1_fil)e%7Cpl_autoload_register%7Cystem)%7Cp(%3F%3Ar(%3F%3Aeg_(%3F%3Areplace(%3F%3A_callback(%3F%3A_array)%3F)%3F%7Cmatch(%3F%3A_all)%3F%7Csplit)%7Coc_(%3F%3A(%3F%3Aterminat%7Cclos%7Cnic)e%7Cget_status%7Copen)%7Cint_r)%7Co(%3F%3Asix_(%3F%3Aget(%3F%3A(%3F%3Ae%5Bgu%5D%7Cg)id%7Clogin%7Cpwnam)%7Cmk(%3F%3Afifo%7Cnod)%7Cttyname%7Ckill)%7Cpen)%7Chp(%3F%3A_(%3F%3Astrip_whitespac%7Cunam)e%7Cversion%7Cinfo)%7Cg_(%3F%3A(%3F%3Aexecut%7Cprepar)e%7Cconnect%7Cquery)%7Ca(%3F%3Arse_(%3F%3Aini_file%7Cstr)%7Cssthru)%7Cutenv)%7Cr(%3F%3Aunkit_(%3F%3Afunction_(%3F%3Are(%3F%3Adefin%7Cnam)e%7Ccopy%7Cadd)%7Cmethod_(%3F%3Are(%3F%3Adefin%7Cnam)e%7Ccopy%7Cadd)%7Cconstant_(%3F%3Aredefine%7Cadd))%7Ce(%3F%3A(%3F%3Agister_(%3F%3Ashutdown%7Ctick)%7Cname)_function%7Cad(%3F%3A(%3F%3Agz)%3Ffile%7C_exif_data%7Cdir))%7Cawurl(%3F%3Ade%7Cen)code)%7Ci(%3F%3Amage(%3F%3Acreatefrom(%3F%3A(%3F%3Ajpe%7Cpn)g%7Cx%5Bbp%5Dm%7Cwbmp%7Cgif)%7C(%3F%3Ajpe%7Cpn)g%7Cg(%3F%3Ad2%3F%7Cif)%7C2%3Fwbmp%7Cxbm)%7Cs_(%3F%3A(%3F%3A(%3F%3Aexecut%7Cwrite%3F%7Cread)ab%7Cfi)le%7Cdir)%7Cni_(%3F%3Aget(%3F%3A_all)%3F%7Cset)%7Cterator_apply%7Cptcembed)%7Cg(%3F%3Aet(%3F%3A_(%3F%3Ac(%3F%3Aurrent_use%7Cfg_va)r%7Cmeta_tags)%7Cmy(%3F%3A%5Bgpu%5Did%7Cinode)%7C(%3F%3Alastmo%7Ccw)d%7Cimagesize%7Cenv)%7Cz(%3F%3A(%3F%3A(%3F%3Adefla%7Cwri)t%7Cencod%7Cfil)e%7Ccompress%7Copen%7Cread)%7Clob)%7Ca(%3F%3Array_(%3F%3Au(%3F%3Aintersect(%3F%3A_u%3Fassoc)%3F%7Cdiff(%3F%3A_u%3Fassoc)%3F)%7Cintersect_u(%3F%3Aassoc%7Ckey)%7Cdiff_u(%3F%3Aassoc%7Ckey)%7Cfilter%7Creduce%7Cmap)%7Cssert(%3F%3A_options)%3F)%7Ch(%3F%3Atml(%3F%3Aspecialchars(%3F%3A_decode)%3F%7C_entity_decode%7Centities)%7C(%3F%3Aash(%3F%3A_(%3F%3Aupdate%7Chmac))%3F%7Cighlight)_file%7Ce(%3F%3Aader_register_callback%7Cx2bin))%7Cf(%3F%3Ai(%3F%3Ale(%3F%3A(%3F%3A%5Bacm%5Dtim%7Cinod)e%7C(%3F%3A_exist%7Cperm)s%7Cgroup)%3F%7Cnfo_open)%7Ctp_(%3F%3Anb_(%3F%3Age%7Cpu)%7Cconnec%7Cge%7Cpu)t%7C(%3F%3Aunction_exis%7Cpu)ts%7Cwrite%7Copen)%7Co(%3F%3Ab_(%3F%3Aget_(%3F%3Ac(%3F%3Aontents%7Clean)%7Cflush)%7Cend_(%3F%3Aclean%7Cflush)%7Cclean%7Cflush%7Cstart)%7Cdbc_(%3F%3Aresult(%3F%3A_all)%3F%7Cexec(%3F%3Aute)%3F%7Cconnect)%7Cpendir)%7Cm(%3F%3Ab_(%3F%3Aereg(%3F%3A_(%3F%3Areplace(%3F%3A_callback)%3F%7Cmatch)%7Ci(%3F%3A_replace)%3F)%3F%7Cparse_str)%7C(%3F%3Aove_uploaded%7Cd5)_file%7Cethod_exists%7Cysql_query%7Ckdir)%7Ce(%3F%3Ax(%3F%3Aif_(%3F%3At(%3F%3Ahumbnail%7Cagname)%7Cimagetype%7Cread_data)%7Cec)%7Cscapeshell(%3F%3Aarg%7Ccmd)%7Crror_reporting%7Cval)%7Cc(%3F%3Aurl_(%3F%3Afile_create%7Cexec%7Cinit)%7Convert_uuencode%7Create_function%7Chr)%7Cu(%3F%3An(%3F%3Aserialize%7Cpack)%7Crl(%3F%3Ade%7Cen)code%7C%5Bak%5D%3Fsort)%7C(%3F%3Ajson_(%3F%3Ade%7Cen)cod%7Cdebug_backtrac%7Ctmpfil)e%7Cb(%3F%3A(%3F%3Ason_(%3F%3Ade%7Cen)%7Case64_en)code%7Czopen)%7Cvar_dump)(%3F%3A%5Cs%7C%2F%5C*.*%5C*%2F%7C%2F%2F.*%7C%23.*)*%5C(.*%5C)",
+        "description":"PHP Injection Attack: High-Risk PHP Function Call Found",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"4",
+        "rule":"%5BoOcC%5D%3A%5Cd%2B%3A%5C%22.%2B%3F%5C%22%3A%5Cd%2B%3A%7B.*%7D",
+        "description":"PHP Injection Attack: Serialized Object Injection",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"5",
+        "rule":"%5C%24%2B(%3F%3A%5Ba-zA-Z_%5Cx7f-%5Cxff%5D%5Ba-zA-Z0-9_%5Cx7f-%5Cxff%5D*%7C%5Cs*%7B.%2B%7D)(%3F%3A%5Cs%7C%5C%5B.%2B%5C%5D%7C%7B.%2B%7D%7C%2F%5C*.*%5C*%2F%7C%2F%2F.*%7C%23.*)*%5C(.*%5C)",
+        "description":"PHP Injection Attack: Variable Function Call Found",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"6",
+        "rule":"(%3Fi)%5Cb(%3F%3Ai(%3F%3As(%3F%3A_(%3F%3Ain(%3F%3At(%3F%3Aeger)%3F%7Cfinite)%7Cn(%3F%3Au(%3F%3Americ%7Cll)%7Can)%7C(%3F%3Acalla%7Cdou)ble%7Cs(%3F%3Acalar%7Ctring)%7Cf(%3F%3Ainite%7Cloat)%7Cre(%3F%3Asource%7Cal)%7Cl(%3F%3Aink%7Cong)%7Ca(%3F%3Array)%3F%7Cobject%7Cbool)%7Cset)%7Cn(%3F%3A(%3F%3Aclud%7Cvok)e%7Ct(%3F%3Adiv%7Cval))%7C(%3F%3Amplod%7Cdat)e%7Cconv)%7Cs(%3F%3At(%3F%3Ar(%3F%3A(%3F%3Ale%7Csp)n%7Ccoll)%7Cat)%7C(%3F%3Ae(%3F%3Arializ%7Cttyp)%7Chuffl)e%7Ci(%3F%3Amilar_text%7Czeof%7Cnh%3F)%7Cp(%3F%3Aliti%3F%7Crintf)%7C(%3F%3Acandi%7Cubst)r%7Cy(%3F%3Amlink%7Cslog)%7Co(%3F%3Aundex%7Crt)%7Cleep%7Crand%7Cqrt)%7Cf(%3F%3Aile(%3F%3A(%3F%3Asiz%7Ctyp)e%7Cowner%7Cpro)%7Cl(%3F%3Ao(%3F%3Aatval%7Cck%7Cor)%7Cush)%7C(%3F%3Area%7Cmo)d%7Ct(%3F%3Aell%7Cok)%7Cunction%7Cclose%7Cgets%7Cstat%7Ceof)%7Cc(%3F%3Ah(%3F%3Ao(%3F%3Awn%7Cp)%7Ceckdate%7Croot%7Cdir%7Cmod)%7Co(%3F%3A(%3F%3A(%3F%3Ansta%7Cu)n%7Cmpac)t%7Csh%3F%7Cpy)%7Close(%3F%3Adir%7Clog)%7C(%3F%3Aurren%7Cryp)t%7Ceil)%7Ce(%3F%3Ax(%3F%3A(%3F%3Atrac%7Ci)t%7Cp(%3F%3Alode)%3F)%7Ca(%3F%3Aster_da(%3F%3Ate%7Cys)%7Cch)%7Cr(%3F%3Aror_log%7Cegi%3F)%7Cmpty%7Ccho%7Cnd)%7Cl(%3F%3Ao(%3F%3Ag(%3F%3A1%5B0p%5D)%3F%7Ccaltime)%7Ci(%3F%3Ank(%3F%3Ainfo)%3F%7Cst)%7C(%3F%3Acfirs%7Csta)t%7Cevenshtein%7Ctrim)%7Cd(%3F%3Ai(%3F%3A(%3F%3Askfreespac)%3Fe%7Cr(%3F%3Aname)%3F)%7Ce(%3F%3Afined%3F%7Ccoct)%7C(%3F%3Aoubleva)%3Fl%7Cate)%7Cr(%3F%3Ae(%3F%3A(%3F%3Aquir%7Ccod%7Cnam)e%7Cadlin%5Bek%5D%7Cwind%7Cset)%7Can(%3F%3Age%7Cd)%7Cound%7Csort%7Ctrim)%7Cm(%3F%3Ab(%3F%3Asplit%7Cereg)%7Ci(%3F%3Acrotime%7Cn)%7Ca(%3F%3Ai%5Bln%5D%7Cx)%7Cetaphone%7Cy%3Fsql%7Chash)%7Cu(%3F%3An(%3F%3A(%3F%3Atain%7Cse)t%7Ciqid%7Clink)%7Cs(%3F%3Aleep%7Cort)%7Ccfirst%7Cmask)%7Ca(%3F%3As(%3F%3A(%3F%3Ase%7Co)rt%7Cinh%3F)%7Cr(%3F%3Asort%7Cray)%7Ctan%5B2h%5D%3F%7Ccosh%3F%7Cbs)%7Ct(%3F%3Ae(%3F%3Axtdomain%7Cmpnam)%7Ca(%3F%3Aint%7Cnh%3F)%7Couch%7Cime%7Crim)%7Ch(%3F%3Ae(%3F%3Aader(%3F%3As_(%3F%3Alis%7Csen)t)%3F%7Cbrev)%7Cypot%7Cash)%7Cp(%3F%3Aa(%3F%3Athinfo%7Cck)%7Cr(%3F%3Aintf%3F%7Cev)%7Cclose%7Co%5Bsw%5D%7Ci)%7Cg(%3F%3Aet(%3F%3At(%3F%3Aext%7Cype)%7Cdate)%7Cmdate)%7Co(%3F%3Apenlog%7Cctdec%7Crd)%7Cb(%3F%3Aasename%7Cindec)%7Cn(%3F%3Aatsor%7Cex)t%7Ck(%3F%3Asort%7Cey)%7Cquotemeta%7Cwordwrap%7Cvirtual%7Cjoin)(%3F%3A%5Cs%7C%2F%5C*.*%5C*%2F%7C%2F%2F.*%7C%23.*)*%5C(.*%5C)",
+        "description":"PHP Injection Attack: Low-Value PHP Function Call Found",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"live",
+        "location":"url"
+      },
+      {
+        "id":"7",
+        "rule":"",
+        "description":"",
+        "tags":{
+          "tag":[
+            "php_rce"
+          ]
+        },
+        "impact":"3",
+        "status":"die",
+        "location":"url"
+      }
+    ]
+  }
+}
