@@ -57,7 +57,7 @@ class Application(tornado.web.Application):
 
 
 if __name__ == '__main__':
-    port = 8888
+    port = 9999
     app = Application()
     http_server = tornado.httpserver.HTTPServer(app)
     http_server.listen(port)

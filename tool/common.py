@@ -8,9 +8,6 @@ import re
 import urllib
 import ConfigParser
 
-# 字段类型
-# ATTACK_TYPE = {"safe": 0, "sqli": 1, "xss": 2, "rce": 3,"traversal": 4, "php_rce": 5}
-
 
 def data_normalize(data, type="normalize"):
     """
@@ -93,8 +90,8 @@ def load_vec():
 
 
 def filter_score(score):
-    attck_oc = {"attack_type":"safe"}
-    safe_oc = {"attack_type":"safe"}
+    attck_oc = {"attack_type":"none"}
+    safe_oc = {"attack_type":"none"}
     attack_value = 0
     try:
         for key, value in score.items():

@@ -33,7 +33,7 @@
         "description":"Remote Command Execution: Java process spawn (CVE-2017-9805)",
         "tags":{
           "tag":[
-            "php_rce"
+            "java_rce"
           ]
         },
         "impact":"3",
@@ -46,7 +46,7 @@
         "description":"Remote Command Execution: Java serialization (CVE-2015-5842)",
         "tags":{
           "tag":[
-            "php_rce"
+            "java_rce"
           ]
         },
         "impact":"3",
@@ -59,7 +59,7 @@
         "description":"Magic bytes Detected, probable java serialization in use",
         "tags":{
           "tag":[
-            "php_rce"
+            "java_rce"
           ]
         },
         "impact":"3",
@@ -72,7 +72,7 @@
         "description":"Magic bytes Detected Base64 Encoded, probable java serialization in use",
         "tags":{
           "tag":[
-            "php_rce"
+            "java_rce"
           ]
         },
         "impact":"3",
