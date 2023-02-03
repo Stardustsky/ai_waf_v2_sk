@@ -35,7 +35,7 @@ http://localhost:9999/svm_waf/?payload={"uri":"http://www.baidu.com/?id=11111' a
 ```commandline
 {"uri": {"attack_type": "sqli", "attack_vec": [1, 0, 1, 0], "probability": [2.400234096532411e-10, 0.9999999997599767], "libinjection": 1}}
 ```
-[url]: http://connorlin.github.io/ 
+[avatar]: https://connorlin.github.io/images/avatar.jpg
 
 多条测试
 ```commandline
