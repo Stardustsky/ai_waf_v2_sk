@@ -11,8 +11,8 @@ from module.m_urlparser import json_parser
 from module.svm.svmutil import svm_load_model
 from sklearn.externals import joblib
 import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
+# reload(sys)
+# sys.setdefaultencoding('utf8')
 
 # 攻击字段定义
 _multi_score_args = dict()
@@ -36,7 +36,7 @@ CLF_DICT = {"sqli": CLF_SQLI, "xss": CLF_XSS, "traversal": CLF_TRAVERSAL, "php_r
 RATIO_DICT = {"sqli": 1.0, "xss": 1.0, "traversal": 1.0, "rce": 1.0, "php_rce": 1.0, "java_rce": 1.0}
 
 # 启用攻击类型
-OPEN_ATTACK_TYPE = ["xss"]
+OPEN_ATTACK_TYPE = ["xss", "sqli", "traversal", "php_rce", "rce", "java_rce"]
 
 # 攻击向量加载
 VEC = load_vec()
@@ -60,6 +60,7 @@ def check_for_api(data):
     filter_attack_score = dict()
     # start = time.time()
     json_data = json_parser(data)
+    print json_data
     # end = time.time()
     # print "Json渲染耗时:%s"%(end - start)
     for position in json_data:
